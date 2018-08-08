@@ -1,11 +1,17 @@
-function letter(character, guess){
+function letter(character){
     this.character = character,
-    this.guess = guess,
-    this.f = function(){
-        // if()
+    this.correct = false,
+    this.val = function(){
+        if(this.correct){
+            return this.character;
+        }else{
+            return "_";
+        }
     },
-    this.g = function(){
-
+    this.guess = function(pick){
+        if(pick === this.character){
+            this.correct = true;
+        }
     }
 }
 
