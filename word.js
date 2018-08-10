@@ -10,9 +10,13 @@ function word(){
         console.log(soFar);
     },
     this.check = function(chara){
+        var exist = true;
         for(i in this.eachLet){
-            this.eachLet[i].guess(chara);
+            if(this.eachLet[i].guess(chara) === 1){
+                exist = false;
+            }
         }
+        return exist;
     }
 }
 

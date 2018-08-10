@@ -9,8 +9,11 @@ function letter(character){
         }
     },
     this.guess = function(pick){
-        if(pick === this.character){
+        if(pick === this.character.toLowerCase()){
             this.correct = true;
+            return 1;
+        }else{
+            return 0;
         }
     }
 }
